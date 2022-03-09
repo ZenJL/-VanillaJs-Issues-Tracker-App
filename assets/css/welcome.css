@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+:root {
+  --white-color: #fff;
+  --black-color: #000;
+  --primary-color: #0087ff;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.5;
+  color: var(--black-color);
+  margin: 0 auto;
+  background: #464646 url(../img/bg_Moon.jpg) center/ cover no-repeat fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  z-index: 2;
+  max-width: 65rem;
+  margin: 0 auto;
+}
+
+.wrapperWelcome {
+  width: 52.2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 3rem;
+}
+
+.wrapperWelcome h1 {
+  font-size: 4.6rem;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  text-align: center;
+  line-height: 1.4;
+}
+
+.wrapperWelcome p {
+  margin-top: 3rem;
+  line-height: 1.4;
+  font-size: 2rem;
+}
+
+.groupOptionBtn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin: 4rem 0 1.5rem;
+}
+
+.groupOptionBtn a {
+  display: block;
+  padding: 1.5rem 2rem;
+  font-size: 1.8rem;
+  color: #fff;
+  border-radius: 8px;
+  background-color: var(--primary-color);
+}
+
+.groupOptionBtn a:hover {
+  opacity: 0.9;
+}
+
+/* for animation ====== */
+.bubble {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  /* top: 0;
+  left: 0; */
+  z-index: 1;
+}
+
+.bubbles li {
+  height: 7rem;
+  width: 7rem;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  animation: bubbleUp 4s linear infinite;
+}
+
+.bubbles li .dot {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: 20%;
+  right: 20%;
+}
+
+.bubbles li:nth-child(1) {
+  top: 20%;
+  left: 20%;
+  animation: bubbleUp 8s linear infinite;
+}
+
+.bubbles li:nth-child(2) {
+  top: 60%;
+  left: 80%;
+  animation: bubbleUp 10s linear infinite;
+}
+
+.bubbles li:nth-child(3) {
+  top: 30%;
+  left: 40%;
+  animation: bubbleUp 5s linear infinite;
+}
+
+.bubbles li:nth-child(4) {
+  top: 66%;
+  left: 5%;
+  animation: bubbleUp 7s linear infinite;
+}
+
+.bubbles li:nth-child(5) {
+  top: 90%;
+  left: 10%;
+  animation: bubbleUp 9s linear infinite;
+}
+
+.bubbles li:nth-child(6) {
+  bottom: 0%;
+  left: 60%;
+  animation: bubbleUp 5s linear infinite;
+}
+
+.bubbles li:nth-child(7) {
+  bottom: 0%;
+  left: 70%;
+  animation: bubbleUp 8s linear infinite;
+}
+
+.bubbles li:nth-child(8) {
+  top: 95%;
+  left: 60%;
+  animation: bubbleUp 10s linear infinite;
+}
+
+.bubbles li:nth-child(9) {
+  bottom: 0%;
+  left: 50%;
+  animation: bubbleUp 6s linear infinite;
+}
+
+.bubbles li:nth-child(10) {
+  top: 45%;
+  left: 90%;
+  animation: bubbleUp 8s linear infinite;
+}
+
+@keyframes bubbleUp {
+  0% {
+    transform: scale(0) translateY(0) rotate(70deg);
+  }
+  100% {
+    transform: scale(1.3) translateY(-10rem) rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 76.7em) {
+  .wrapperWelcome {
+    width: 100%;
+  }
+}

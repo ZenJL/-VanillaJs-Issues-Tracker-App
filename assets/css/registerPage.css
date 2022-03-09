@@ -1,0 +1,249 @@
+:root {
+  --primary-color: #0087ff;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body {
+  font-size: 1.6rem;
+  font-weight: normal;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.5;
+}
+
+input,
+textarea,
+select,
+button {
+  outline: none;
+  font-size: 1.6rem;
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.main-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.register {
+  background-image: url(../img/bg_Moon.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-color: #464646;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.register__content {
+  border-radius: 1rem;
+  background-color: #ffffff;
+  padding: 3rem 5rem;
+  margin: 5rem 0;
+  width: 41.2rem;
+  height: 100%;
+  position: relative;
+}
+
+.register__content::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 7%;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right: 8px solid #285961;
+}
+
+.register__content::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 7%;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 8px solid #2a525a;
+}
+
+.register__heading {
+  margin-bottom: 3.6rem;
+  font-size: 2.4rem;
+  font-weight: 500;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.register-form__group {
+  margin-bottom: 2rem;
+}
+
+.register-form__label {
+  display: inline-block;
+  font-weight: 500;
+  color: var(--primary-color);
+  width: 100%;
+}
+
+.mandatory {
+  color: red;
+}
+
+.register-form__input {
+  display: block;
+  width: 100%;
+  padding: 8px 0;
+  font-size: 2.2rem;
+  border: none;
+  border-bottom: 2px solid #95c4ee;
+  color: var(--primary-color);
+}
+
+.register-form__input-pass {
+  color: var(--primary-color);
+  font-weight: bold;
+  font: small-caption;
+  font-size: 2.2rem;
+}
+
+.register-form__term {
+  margin-top: 2rem;
+  text-align: justify;
+}
+
+.register-form__submit {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  height: 4.8rem;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #fff;
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.register__remind-acc-mess {
+  text-align: center;
+}
+
+.register__create-acc-link {
+  color: var(--primary-color);
+}
+
+.error-mess {
+  /* display: block; */
+  font-weight: 400;
+  color: red;
+  width: 100%;
+  margin-top: 1rem;
+  text-align: center;
+  display: none;
+}
+
+.successful {
+  width: 50rem;
+  height: 20rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  border-radius: 16px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.popup-successful {
+  color: var(--primary-color);
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.loadingSpinnerContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5000;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.loadingSpinner {
+  width: 6.4rem;
+  height: 6.4rem;
+  border: 8px solid;
+  border-color: #00cc66 transparent #00cc66 transparent;
+  border-radius: 50%;
+  animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* responsive media */
+/* 768px */
+@media screen and (max-width: 48em) {
+  .register {
+    height: 100%;
+    padding: 1.6rem 0;
+  }
+}
+
+/* 480px */
+@media screen and (max-width: 30em) {
+  .register__content {
+    width: 30rem;
+  }
+}
+
+/* 320px */
+@media screen and (max-width: 20em) {
+  .register {
+    padding: 4rem 0;
+  }
+
+  .register__content {
+    width: 100%;
+  }
+}
