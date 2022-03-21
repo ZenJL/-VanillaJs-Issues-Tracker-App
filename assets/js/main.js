@@ -3,6 +3,7 @@ const backendAPI = 'https://tony-json-server.herokuapp.com';
 
 // an empty array store backend data
 let dataIssues = [];
+let noneSortData = [];
 
 // get elements
 const signoutBtn = document.getElementById('signout');
@@ -54,6 +55,8 @@ function callApi(callback) {
 function autoReload() {
   callApi((responseData) => {
     console.log('day la issue: ', responseData);
+    noneSortData = responseData.data;
+    console.log('none sort: ', noneSortData);
     renderData(responseData.data);
   });
 }
@@ -63,6 +66,7 @@ function renderData(issues) {
   issuesList.innerHTML = '';
 
   dataIssues = issues;
+  // noneSortData = issues;
 
   issues.forEach((issue) => {
     issuesList.innerHTML += `
@@ -341,6 +345,8 @@ function filterManual(value) {
 
 // order by event
 orderBy.addEventListener('change', function () {
+  if (orderBy.value === '') autoReload();
+
   if (orderBy.value === 'asc') {
     renderData(sortAsc(dataIssues));
   }

@@ -78,7 +78,8 @@ function checkLogin() {
       emailInput.style.border = '1px solid red';
       showError.style.display = 'flex';
       showError.innerHTML =
-        "The email hasn't been registered yet. Please check your email and try again.";
+        // "The email hasn't been registered yet. Please check your email and try again.";
+        'Email / password incorrect. Please check again.';
     }, 1000);
     setTimeout(() => {
       emailInput.style.border = 'none';
